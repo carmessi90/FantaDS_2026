@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+	color: #f4f7fb;
+	background: #07111f;
+	font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+}
+
+.manager-panel {
+	border: 1px solid rgb(255 255 255 / 8%);
+	border-radius: 8px;
+	background: #101c2c;
+	box-shadow: 0 14px 36px rgb(0 0 0 / 18%);
+	transition: border-color 200ms, box-shadow 200ms, transform 200ms;
+}
+
+.manager-panel:hover {
+	border-color: rgb(255 255 255 / 13%);
+	box-shadow: 0 18px 42px rgb(0 0 0 / 24%);
+}
+
+.manager-hero {
+	position: relative;
+	isolation: isolate;
+	background:
+		linear-gradient(90deg, rgb(4 14 25 / 96%) 0%, rgb(7 17 31 / 80%) 52%, rgb(6 26 23 / 68%) 100%),
+		linear-gradient(120deg, #0b1626, #0c2a24);
+}
+
+.manager-hero::before,
+.manager-hero::after {
+	position: absolute;
+	z-index: -1;
+	content: '';
+	inset: 0;
+	pointer-events: none;
+}
+
+.manager-hero::before {
+	opacity: 0.28;
+	background-image:
+		linear-gradient(90deg, transparent 49.8%, rgb(123 255 177 / 36%) 50%, transparent 50.2%),
+		linear-gradient(0deg, transparent 49.7%, rgb(123 255 177 / 24%) 50%, transparent 50.3%);
+	background-size: 100% 100%;
+}
+
+.manager-hero::after {
+	opacity: 0.12;
+	background-image: repeating-linear-gradient(135deg, transparent 0 12px, rgb(255 255 255 / 35%) 13px 14px);
+}
+
+.pitch-preview {
+	background-color: #0c553e;
+	background-image:
+		linear-gradient(90deg, transparent 49.6%, rgb(255 255 255 / 32%) 50%, transparent 50.4%),
+		radial-gradient(circle at 50% 50%, transparent 0 20%, rgb(255 255 255 / 28%) 20.5% 21%, transparent 21.5%),
+		repeating-linear-gradient(90deg, rgb(255 255 255 / 4%) 0 12.5%, transparent 12.5% 25%);
+}
+
+.manager-eyebrow {
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	color: #9aa8ba;
+}
+
+.topbar-icon-button {
+	display: inline-flex;
+	width: 2.25rem;
+	height: 2.25rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.375rem;
+	color: #9aa8ba;
+	transition: color 200ms, background-color 200ms;
+}
+
+.topbar-icon-button:hover {
+	background: rgb(255 255 255 / 6%);
+	color: #f4f7fb;
+}
+
+.manager-inline-action,
+.manager-text-action {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	color: #86efac;
+	font-size: 0.75rem;
+	font-weight: 700;
+	transition: color 200ms;
+}
+
+.manager-inline-action:disabled,
+.manager-text-action:disabled {
+	cursor: not-allowed;
+	opacity: 0.72;
+}
+
+.action-icon {
+	display: flex;
+	width: 2.25rem;
+	height: 2.25rem;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.375rem;
+	background: rgb(255 255 255 / 7%);
+	color: #9aa8ba;
+}
+
+.action-icon-accent {
+	background: rgb(34 197 94 / 20%);
+	color: #86efac;
+}
